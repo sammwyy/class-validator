@@ -125,6 +125,10 @@ public class StringUtils {
         return value.matches("^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$");
     }
 
+    public static boolean isMongoID(String value) {
+        return value.matches("^[0-9a-fA-F]{24}$");
+    }
+
     public static boolean isSwift(String value) {
         return isBIC(value);
     }

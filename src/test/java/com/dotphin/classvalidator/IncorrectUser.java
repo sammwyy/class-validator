@@ -24,6 +24,7 @@ import com.dotphin.classvalidator.string.IsLowerCase;
 import com.dotphin.classvalidator.string.IsMacAddress;
 import com.dotphin.classvalidator.string.IsMagnetURI;
 import com.dotphin.classvalidator.string.IsMobilePhone;
+import com.dotphin.classvalidator.string.IsMongoID;
 import com.dotphin.classvalidator.string.IsRegex;
 
 public class IncorrectUser {
@@ -98,6 +99,9 @@ public class IncorrectUser {
 
     @IsMobilePhone
     public String mobilePhone = "Not a valid mobile phone";
+
+    @IsMongoID
+    public String mongoID = "Not a valid Mongo ID";
 
     @IsRegex("a.c")
     public String regex = "def";
