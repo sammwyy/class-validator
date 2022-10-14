@@ -2,6 +2,7 @@ package com.dotphin.classvalidator.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 public class StringUtils {
     public static boolean isAlpha(String value) {
@@ -80,6 +81,31 @@ public class StringUtils {
     public static boolean isLength(String value, int min, int max) {
         int length = value.length();
         return length <= max && length >= min;
+    }
+
+    public static boolean isLocale(String value) {
+        String[] parts = value.split("_");
+        Locale locale = null;
+
+        switch (parts.length) {
+            case 3:
+                locale = new Locale(parts[0], parts[1], parts[2]);
+                break;
+            case 2:
+                locale = new Locale(parts[0], parts[1]);
+                break;
+            case 1:
+                locale = new Locale(parts[0]);
+                break;
+            default:
+                return false;
+        }
+
+        try {
+            return locale.getISO3Language() != null && locale.getISO3Country() != null;
+        } catch (Exception ignored) {
+            return false;
+        }
     }
 
     public static boolean isSwift(String value) {

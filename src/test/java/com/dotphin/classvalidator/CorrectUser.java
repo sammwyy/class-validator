@@ -18,6 +18,7 @@ import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.IsHex;
 import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.IsIP;
+import com.dotphin.classvalidator.string.IsLocale;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -81,4 +82,7 @@ public class CorrectUser {
 
     @IsIP
     public String ip = "192.168.0.1";
+
+    @IsLocale
+    public String locale = "es_AR";
 }

@@ -22,6 +22,7 @@ import com.dotphin.classvalidator.validators.string.IsHSLValidator;
 import com.dotphin.classvalidator.validators.string.IsHexColorValidator;
 import com.dotphin.classvalidator.validators.string.IsHexValidator;
 import com.dotphin.classvalidator.validators.string.IsIPValidator;
+import com.dotphin.classvalidator.validators.string.IsLocaleValidator;
 import com.dotphin.classvalidator.validators.string.LengthValidator;
 import com.dotphin.classvalidator.validators.string.RegexValidator;
 
@@ -50,6 +51,7 @@ public class ValidatorRegistry {
         register(new IsHexColorValidator());
         register(new IsHSLValidator());
         register(new IsIPValidator());
+        register(new IsLocaleValidator());
         register(new LengthValidator());
         register(new RegexValidator());
     }
