@@ -8,8 +8,8 @@
 
     <!-- Project Information -->
     <name>class-validator</name>
-    <description>Validate objects using class-based schema.</description>
-    <version>0.0.4</version>
+    <description>Annotation-based field validation for Classes.</description>
+    <version>0.0.1</version>
     <url>https://github.com/dotphin/class-validator</url>
 
     <properties>
