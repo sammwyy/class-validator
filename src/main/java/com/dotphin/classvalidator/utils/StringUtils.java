@@ -60,6 +60,11 @@ public class StringUtils {
         return value.matches("(?=^.{4,253}$)(^((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\\.)+[a-zA-Z]{2,63}$)");
     }
 
+    public static boolean isHSL(String value) {
+        return value.matches(
+                "^hsl\\(\\s*(0|[1-9]\\d?|[12]\\d\\d|3[0-5]\\d)\\s*,\\s*((0|[1-9]\\d?|100)%)\\s*,\\s*((0|[1-9]\\d?|100)%)\\s*\\)$");
+    }
+
     public static boolean isLength(String value, int min, int max) {
         int length = value.length();
         return length <= max && length >= min;

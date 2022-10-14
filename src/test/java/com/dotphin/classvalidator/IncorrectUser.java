@@ -14,6 +14,7 @@ import com.dotphin.classvalidator.string.IsDateString;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.IsEthereumAddress;
 import com.dotphin.classvalidator.string.IsFQDN;
+import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -65,4 +66,7 @@ public class IncorrectUser {
 
     @IsFQDN
     public String fqdn = "Not a valid FQDN";
+
+    @IsHSL
+    public String hsl = "Not a valid HSL";
 }
