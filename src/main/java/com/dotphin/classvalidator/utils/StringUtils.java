@@ -147,6 +147,10 @@ public class StringUtils {
                 "^rgb[(](?:\\s*0*(?:\\d\\d?(?:\\.\\d+)?(?:\\s*%)?|\\.\\d+\\s*%|100(?:\\.0*)?\\s*%|(?:1\\d\\d|2[0-4]\\d|25[0-5])(?:\\.\\d+)?)\\s*(?:,(?![)])|(?=[)]))){3}[)]$");
     }
 
+    public static boolean isSemVer(String value) {
+        return value.matches("^[1-9]\\d*\\.\\d+\\.\\d+(?:-[a-zA-Z0-9]+)?$");
+    }
+
     public static boolean isSwift(String value) {
         return isBIC(value);
     }

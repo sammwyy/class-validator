@@ -29,6 +29,7 @@ import com.dotphin.classvalidator.string.IsNumeric;
 import com.dotphin.classvalidator.string.IsPort;
 import com.dotphin.classvalidator.string.IsRGB;
 import com.dotphin.classvalidator.string.IsRegex;
+import com.dotphin.classvalidator.string.IsSemVer;
 
 public class CorrectUser {
     @Contains("Hello World")
@@ -117,4 +118,7 @@ public class CorrectUser {
 
     @IsRGB
     public String rgb = "rgb(255, 0, 0)";
+
+    @IsSemVer
+    public String semver = "1.0.0-SNAPSHOT";
 }

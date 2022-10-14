@@ -29,6 +29,7 @@ import com.dotphin.classvalidator.string.IsNumeric;
 import com.dotphin.classvalidator.string.IsPort;
 import com.dotphin.classvalidator.string.IsRGB;
 import com.dotphin.classvalidator.string.IsRegex;
+import com.dotphin.classvalidator.string.IsSemVer;
 
 public class IncorrectUser {
     @Contains("Hello World")
@@ -117,4 +118,7 @@ public class IncorrectUser {
 
     @IsRGB
     public String rgb = "rgb(777, notvalid, null)";
+
+    @IsSemVer
+    public String semver = "Not a valid SemVer";
 }
