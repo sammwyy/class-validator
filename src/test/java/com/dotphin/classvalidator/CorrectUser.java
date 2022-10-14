@@ -9,6 +9,7 @@ import com.dotphin.classvalidator.string.IsBTCAddress;
 import com.dotphin.classvalidator.string.IsBase32;
 import com.dotphin.classvalidator.string.IsBase64;
 import com.dotphin.classvalidator.string.IsCreditCard;
+import com.dotphin.classvalidator.string.IsDataURI;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
@@ -49,4 +50,7 @@ public class CorrectUser {
 
     @IsCreditCard
     public String creditCard = "4222222222222";
+
+    @IsDataURI
+    public String dataURI = "data:image/jpeg;base64,UEsDBBQAAAAI";
 }
