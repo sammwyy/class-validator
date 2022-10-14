@@ -155,11 +155,15 @@ public class StringUtils {
         return isBIC(value);
     }
 
-    public static boolean isUUID(String value) {
-        return value.matches("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$");
-    }
-
     public static boolean isUpperCase(String value) {
         return value.toUpperCase().equals(value);
+    }
+
+    public static boolean isURL(String value) {
+        return value.matches("^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]");
+    }
+
+    public static boolean isUUID(String value) {
+        return value.matches("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$");
     }
 }

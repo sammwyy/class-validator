@@ -30,6 +30,7 @@ import com.dotphin.classvalidator.string.IsPort;
 import com.dotphin.classvalidator.string.IsRGB;
 import com.dotphin.classvalidator.string.IsRegex;
 import com.dotphin.classvalidator.string.IsSemVer;
+import com.dotphin.classvalidator.string.IsURL;
 import com.dotphin.classvalidator.string.IsUUID;
 import com.dotphin.classvalidator.string.IsUpperCase;
 
@@ -126,6 +127,9 @@ public class IncorrectUser {
 
     @IsUpperCase
     public String uppercase = "Not Upper Case";
+
+    @IsURL
+    public String url = "not://a_valid_url";
 
     @IsUUID
     public String uuid = "Not a valid UUID";

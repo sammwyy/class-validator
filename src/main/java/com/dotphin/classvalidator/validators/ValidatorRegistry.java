@@ -34,6 +34,7 @@ import com.dotphin.classvalidator.validators.string.IsRGBValidator;
 import com.dotphin.classvalidator.validators.string.IsLengthValidator;
 import com.dotphin.classvalidator.validators.string.IsRegexValidator;
 import com.dotphin.classvalidator.validators.string.IsSemVerValidator;
+import com.dotphin.classvalidator.validators.string.IsURLValidator;
 import com.dotphin.classvalidator.validators.string.IsUUIDValidator;
 import com.dotphin.classvalidator.validators.string.IsUpperCaseValidator;
 
@@ -75,6 +76,7 @@ public class ValidatorRegistry {
         register(new IsRGBValidator());
         register(new IsSemVerValidator());
         register(new IsUpperCaseValidator());
+        register(new IsURLValidator());
         register(new IsUUIDValidator());
     }
 
