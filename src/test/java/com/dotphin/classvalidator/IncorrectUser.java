@@ -37,13 +37,13 @@ import com.dotphin.classvalidator.string.NotContains;
 
 public class IncorrectUser {
     @Contains("Hello World")
-    public String description = "No, not contains.";
+    public String contains = "No, not contains.";
 
     @IsAlpha
-    public String name = "Not a name";
+    public String alpha = "Not a name";
 
     @IsAlphanumeric
-    public String postalcode = "Not a postal code";
+    public String alphanumeric = "Not a postal code";
 
     @IsBIC
     public String bic = "Not a bic";
