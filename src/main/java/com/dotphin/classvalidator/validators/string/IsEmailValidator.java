@@ -3,21 +3,17 @@ package com.dotphin.classvalidator.validators.string;
 import java.lang.reflect.Field;
 
 import com.dotphin.classvalidator.string.IsEmail;
-import com.dotphin.classvalidator.validators.Validator;
+import com.dotphin.classvalidator.utils.StringUtils;
+import com.dotphin.classvalidator.validators.StringValidator;
 
-public class IsEmailValidator implements Validator {
+public class IsEmailValidator extends StringValidator {
     @Override
     public Class<?> getAnnotation() {
         return IsEmail.class;
     }
 
     @Override
-    public boolean isValid(Field field, Object value) {
-        if (value != null && value instanceof String) {
-            String str = (String) value;
-            return str.contains("@");
-        }
-
-        return true;
+    public boolean isValid(Field field, String value) {
+        return StringUtils.isEmail(value);
     }
 }

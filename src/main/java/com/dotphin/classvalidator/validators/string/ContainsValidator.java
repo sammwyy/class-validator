@@ -3,23 +3,17 @@ package com.dotphin.classvalidator.validators.string;
 import java.lang.reflect.Field;
 
 import com.dotphin.classvalidator.string.Contains;
-import com.dotphin.classvalidator.validators.Validator;
+import com.dotphin.classvalidator.validators.StringValidator;
 
-public class ContainsValidator implements Validator {
+public class ContainsValidator extends StringValidator {
     @Override
     public Class<?> getAnnotation() {
         return Contains.class;
     }
 
     @Override
-    public boolean isValid(Field field, Object value) {
+    public boolean isValid(Field field, String value) {
         Contains annotation = field.getAnnotation(Contains.class);
-
-        if (value != null && value instanceof String) {
-            String str = (String) value;
-            return str.contains(annotation.value());
-        }
-
-        return true;
+        return value.contains(annotation.value());
     }
 }
