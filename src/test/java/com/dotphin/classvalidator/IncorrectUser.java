@@ -20,6 +20,7 @@ import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.IsIP;
 import com.dotphin.classvalidator.string.IsLength;
 import com.dotphin.classvalidator.string.IsLocale;
+import com.dotphin.classvalidator.string.IsLowerCase;
 import com.dotphin.classvalidator.string.IsRegex;
 
 public class IncorrectUser {
@@ -82,6 +83,9 @@ public class IncorrectUser {
 
     @IsLocale
     public String locale = "Not a valid Locale";
+
+    @IsLowerCase
+    public String lowercase = "Not Lower Case";
 
     @IsRegex("a.c")
     public String regex = "def";

@@ -108,6 +108,10 @@ public class StringUtils {
         }
     }
 
+    public static boolean isLowerCase(String value) {
+        return value.toLowerCase().equals(value);
+    }
+
     public static boolean isSwift(String value) {
         return isBIC(value);
     }
