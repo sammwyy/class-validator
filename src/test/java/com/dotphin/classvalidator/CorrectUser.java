@@ -31,6 +31,7 @@ import com.dotphin.classvalidator.string.IsRGB;
 import com.dotphin.classvalidator.string.IsRegex;
 import com.dotphin.classvalidator.string.IsSemVer;
 import com.dotphin.classvalidator.string.IsUUID;
+import com.dotphin.classvalidator.string.IsUpperCase;
 
 public class CorrectUser {
     @Contains("Hello World")
@@ -122,6 +123,9 @@ public class CorrectUser {
 
     @IsSemVer
     public String semver = "1.0.0-SNAPSHOT";
+
+    @IsUpperCase
+    public String uppercase = "UPPER CASE";
 
     @IsUUID
     public String uuid = "01234567-9ABC-DEF0-1234-56789ABCDEF0";

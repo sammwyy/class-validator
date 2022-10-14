@@ -31,6 +31,7 @@ import com.dotphin.classvalidator.string.IsRGB;
 import com.dotphin.classvalidator.string.IsRegex;
 import com.dotphin.classvalidator.string.IsSemVer;
 import com.dotphin.classvalidator.string.IsUUID;
+import com.dotphin.classvalidator.string.IsUpperCase;
 
 public class IncorrectUser {
     @Contains("Hello World")
@@ -122,6 +123,9 @@ public class IncorrectUser {
 
     @IsSemVer
     public String semver = "Not a valid SemVer";
+
+    @IsUpperCase
+    public String uppercase = "Not Upper Case";
 
     @IsUUID
     public String uuid = "Not a valid UUID";

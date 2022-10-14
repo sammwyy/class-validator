@@ -158,4 +158,8 @@ public class StringUtils {
     public static boolean isUUID(String value) {
         return value.matches("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$");
     }
+
+    public static boolean isUpperCase(String value) {
+        return value.toUpperCase().equals(value);
+    }
 }
