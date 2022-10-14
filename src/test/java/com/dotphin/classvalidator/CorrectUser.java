@@ -25,6 +25,7 @@ import com.dotphin.classvalidator.string.IsMacAddress;
 import com.dotphin.classvalidator.string.IsMagnetURI;
 import com.dotphin.classvalidator.string.IsMobilePhone;
 import com.dotphin.classvalidator.string.IsMongoID;
+import com.dotphin.classvalidator.string.IsNumeric;
 import com.dotphin.classvalidator.string.IsRegex;
 
 public class CorrectUser {
@@ -102,6 +103,9 @@ public class CorrectUser {
 
     @IsMongoID
     public String mongoID = "551137c2f9e1fac808a5f572";
+
+    @IsNumeric
+    public String numeric = "1234567890";
 
     @IsRegex("a.c")
     public String regex = "abc";

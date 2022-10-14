@@ -129,6 +129,10 @@ public class StringUtils {
         return value.matches("^[0-9a-fA-F]{24}$");
     }
 
+    public static boolean isNumeric(String value) {
+        return value.matches("^\\d+$");
+    }
+
     public static boolean isSwift(String value) {
         return isBIC(value);
     }
