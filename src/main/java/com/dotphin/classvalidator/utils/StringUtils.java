@@ -117,6 +117,10 @@ public class StringUtils {
                 "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$");
     }
 
+    public static boolean isMagnetURI(String value) {
+        return value.matches("(magnet:[\\?xt\\=\\w\\:\\&\\;\\+\\%.]+)");
+    }
+
     public static boolean isSwift(String value) {
         return isBIC(value);
     }

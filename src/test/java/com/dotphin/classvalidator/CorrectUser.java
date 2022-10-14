@@ -22,6 +22,7 @@ import com.dotphin.classvalidator.string.IsLength;
 import com.dotphin.classvalidator.string.IsLocale;
 import com.dotphin.classvalidator.string.IsLowerCase;
 import com.dotphin.classvalidator.string.IsMacAddress;
+import com.dotphin.classvalidator.string.IsMagnetURI;
 import com.dotphin.classvalidator.string.IsRegex;
 
 public class CorrectUser {
@@ -90,6 +91,9 @@ public class CorrectUser {
 
     @IsMacAddress
     public String macAddress = "00:00:5e:00:53:af";
+
+    @IsMagnetURI
+    public String magnetURI = "magnet:?xt=urn:3216546465987dfgs9798";
 
     @IsRegex("a.c")
     public String regex = "abc";
