@@ -1,5 +1,6 @@
 package com.dotphin.classvalidator;
 
+import com.dotphin.classvalidator.array.IsArrayLength;
 import com.dotphin.classvalidator.common.IsNotNull;
 import com.dotphin.classvalidator.number.DoubleRange;
 import com.dotphin.classvalidator.number.FloatRange;
@@ -47,6 +48,10 @@ import com.dotphin.classvalidator.string.IsUpperCase;
 import com.dotphin.classvalidator.string.NotContains;
 
 public class CorrectUser {
+    // Array
+    @IsArrayLength(min = 2, max = 5)
+    public String[] isArrayLength = new String[] { "a", "valid", "array", "length" };
+
     // Number
     @IsDivisibleBy(5)
     public int age = 20;
