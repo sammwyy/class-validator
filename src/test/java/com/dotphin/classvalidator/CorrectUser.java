@@ -21,6 +21,7 @@ import com.dotphin.classvalidator.string.IsIP;
 import com.dotphin.classvalidator.string.IsLength;
 import com.dotphin.classvalidator.string.IsLocale;
 import com.dotphin.classvalidator.string.IsLowerCase;
+import com.dotphin.classvalidator.string.IsMacAddress;
 import com.dotphin.classvalidator.string.IsRegex;
 
 public class CorrectUser {
@@ -86,6 +87,9 @@ public class CorrectUser {
 
     @IsLowerCase
     public String lowercase = "lower case";
+
+    @IsMacAddress
+    public String macAddress = "00:00:5e:00:53:af";
 
     @IsRegex("a.c")
     public String regex = "abc";
