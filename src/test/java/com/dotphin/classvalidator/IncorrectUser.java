@@ -27,6 +27,7 @@ import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.IsHex;
 import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.IsIP;
+import com.dotphin.classvalidator.string.IsInStringArray;
 import com.dotphin.classvalidator.string.IsLength;
 import com.dotphin.classvalidator.string.IsLocale;
 import com.dotphin.classvalidator.string.IsLowerCase;
@@ -126,9 +127,11 @@ public class IncorrectUser {
     @IsHSL
     public String hsl = "Not a valid HSL";
 
+    @IsInStringArray({ "red", "blue", "green", "yellow" })
+    public String isInStringArray = "white";
+
     @IsIP
     public String ip = "Not a valid IP";
-
     @IsLength(min = 4, max = 16)
     public String username = "Super extra long username, this is invalid";
 

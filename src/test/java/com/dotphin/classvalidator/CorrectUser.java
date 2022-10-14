@@ -27,6 +27,7 @@ import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.IsHex;
 import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.IsIP;
+import com.dotphin.classvalidator.string.IsInStringArray;
 import com.dotphin.classvalidator.string.IsLength;
 import com.dotphin.classvalidator.string.IsLocale;
 import com.dotphin.classvalidator.string.IsLowerCase;
@@ -125,6 +126,9 @@ public class CorrectUser {
 
     @IsHSL
     public String hsl = "hsl(240, 100%, 50%)";
+
+    @IsInStringArray({ "red", "blue", "green", "yellow" })
+    public String isInStringArray = "red";
 
     @IsIP
     public String ip = "192.168.0.1";
