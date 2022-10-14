@@ -121,6 +121,10 @@ public class StringUtils {
         return value.matches("(magnet:[\\?xt\\=\\w\\:\\&\\;\\+\\%.]+)");
     }
 
+    public static boolean IsMobilePhone(String value) {
+        return value.matches("^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$");
+    }
+
     public static boolean isSwift(String value) {
         return isBIC(value);
     }

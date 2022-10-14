@@ -26,6 +26,7 @@ import com.dotphin.classvalidator.validators.string.IsLocaleValidator;
 import com.dotphin.classvalidator.validators.string.IsLowerCaseValidator;
 import com.dotphin.classvalidator.validators.string.IsMacAddressValidator;
 import com.dotphin.classvalidator.validators.string.IsMagnetURIValidator;
+import com.dotphin.classvalidator.validators.string.IsMobilePhoneValidator;
 import com.dotphin.classvalidator.validators.string.IsLengthValidator;
 import com.dotphin.classvalidator.validators.string.IsRegexValidator;
 
@@ -59,6 +60,7 @@ public class ValidatorRegistry {
         register(new IsLowerCaseValidator());
         register(new IsMacAddressValidator());
         register(new IsMagnetURIValidator());
+        register(new IsMobilePhoneValidator());
         register(new IsRegexValidator());
     }
 
