@@ -1,9 +1,13 @@
 package com.dotphin.classvalidator;
 
 import com.dotphin.classvalidator.common.IsNotNull;
+import com.dotphin.classvalidator.number.DoubleRange;
+import com.dotphin.classvalidator.number.FloatRange;
+import com.dotphin.classvalidator.number.IntRange;
 import com.dotphin.classvalidator.number.IsDivisibleBy;
 import com.dotphin.classvalidator.number.IsNegative;
 import com.dotphin.classvalidator.number.IsPositive;
+import com.dotphin.classvalidator.number.LongRange;
 import com.dotphin.classvalidator.string.Contains;
 import com.dotphin.classvalidator.string.IsAlpha;
 import com.dotphin.classvalidator.string.IsAlphanumeric;
@@ -48,6 +52,18 @@ public class CorrectUser {
 
     @IsPositive
     public int positive = 1;
+
+    @DoubleRange(min = 0.000000001, max = 0.000000002)
+    public double doubleRange = 0.0000000015;
+
+    @FloatRange(min = 1000000000.001f, max = 1000000000.002f)
+    public float floatRange = 1000000000.0015f;
+
+    @IntRange(min = 1, max = 3)
+    public int intRange = 2;
+
+    @LongRange(min = 999999999999999999L, max = 1000000000000000001L)
+    public long longRange = 1000000000000000000L;
 
     // String
     @Contains("Hello World")

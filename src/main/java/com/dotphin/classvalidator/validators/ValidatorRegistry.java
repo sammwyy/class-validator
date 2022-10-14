@@ -5,9 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.dotphin.classvalidator.validators.common.IsNotNullValidator;
+import com.dotphin.classvalidator.validators.number.DoubleRangeValidator;
+import com.dotphin.classvalidator.validators.number.FloatRangeValidator;
+import com.dotphin.classvalidator.validators.number.IntRangeValidator;
 import com.dotphin.classvalidator.validators.number.IsDivisibleByValidator;
 import com.dotphin.classvalidator.validators.number.IsNegativeValidator;
 import com.dotphin.classvalidator.validators.number.IsPositiveValidator;
+import com.dotphin.classvalidator.validators.number.LongRangeValidator;
 import com.dotphin.classvalidator.validators.string.ContainsValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphaValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphanumericValidator;
@@ -50,7 +54,11 @@ public class ValidatorRegistry {
         register(new IsNotNullValidator());
 
         // Number
+        register(new DoubleRangeValidator());
+        register(new FloatRangeValidator());
+        register(new IntRangeValidator());
         register(new IsDivisibleByValidator());
+        register(new LongRangeValidator());
         register(new IsNegativeValidator());
         register(new IsPositiveValidator());
 
