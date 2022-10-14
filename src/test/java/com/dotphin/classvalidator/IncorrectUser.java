@@ -18,8 +18,8 @@ import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.IsHex;
 import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.IsIP;
+import com.dotphin.classvalidator.string.IsLength;
 import com.dotphin.classvalidator.string.IsLocale;
-import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
 public class IncorrectUser {
@@ -34,9 +34,6 @@ public class IncorrectUser {
 
     @IsBIC
     public String bic = "Not a bic";
-
-    @Length(min = 4, max = 16)
-    public String username = "Super extra long username, this is invalid";
 
     @Regex("a.c")
     public String regex = "def";
@@ -82,6 +79,9 @@ public class IncorrectUser {
 
     @IsIP
     public String ip = "Not a valid IP";
+
+    @IsLength(min = 4, max = 16)
+    public String username = "Super extra long username, this is invalid";
 
     @IsLocale
     public String locale = "Not a valid Locale";

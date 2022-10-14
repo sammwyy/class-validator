@@ -18,8 +18,8 @@ import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.IsHex;
 import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.IsIP;
+import com.dotphin.classvalidator.string.IsLength;
 import com.dotphin.classvalidator.string.IsLocale;
-import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
 public class CorrectUser {
@@ -34,9 +34,6 @@ public class CorrectUser {
 
     @IsBIC
     public String bic = "BFRPARBA";
-
-    @Length(min = 4, max = 16)
-    public String username = "sammwy";
 
     @Regex("a.c")
     public String regex = "abc";
@@ -82,6 +79,9 @@ public class CorrectUser {
 
     @IsIP
     public String ip = "192.168.0.1";
+
+    @IsLength(min = 4, max = 16)
+    public String username = "sammwy";
 
     @IsLocale
     public String locale = "es_AR";
