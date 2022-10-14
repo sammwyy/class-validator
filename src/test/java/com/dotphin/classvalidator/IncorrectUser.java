@@ -5,6 +5,7 @@ import com.dotphin.classvalidator.string.Contains;
 import com.dotphin.classvalidator.string.IsAlpha;
 import com.dotphin.classvalidator.string.IsAlphanumeric;
 import com.dotphin.classvalidator.string.IsBIC;
+import com.dotphin.classvalidator.string.IsBTCAddress;
 import com.dotphin.classvalidator.string.IsBase32;
 import com.dotphin.classvalidator.string.IsBase64;
 import com.dotphin.classvalidator.string.IsEmail;
@@ -41,4 +42,7 @@ public class IncorrectUser {
 
     @IsBase64
     public String base64 = "is not base64";
+
+    @IsBTCAddress
+    public String btcAddress = "is not a btc address";
 }

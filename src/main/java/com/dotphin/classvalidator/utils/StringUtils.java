@@ -21,6 +21,10 @@ public class StringUtils {
         return value.matches("^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$");
     }
 
+    public static boolean isBTCAddress(String value) {
+        return value.matches("^(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$");
+    }
+
     public static boolean isEmail(String value) {
         return value.matches("^(.+)@(.+)$");
     }
