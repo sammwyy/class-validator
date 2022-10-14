@@ -1,5 +1,6 @@
 package com.dotphin.classvalidator.validators;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,5 +36,9 @@ public class ValidatorRegistry {
 
     public static Validator getValidatorForClass(Class<?> annotation) {
         return validators.get(annotation);
+    }
+
+    public static Collection<Validator> getValidators() {
+        return validators.values();
     }
 }

@@ -3,18 +3,16 @@ package com.dotphin.classvalidator;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.dotphin.classvalidator.validators.ValidatorRegistry;
+
 public class ValidationTest {
     @Test
-    public void validationTest() {
+    public void correctUserValidation() {
         ClassValidator validator = new ClassValidator();
 
-        User user = new User();
-        user.username = "Sammwy";
-        user.email = "sammwy@example.com";
-        user.age = 20;
-        user.bic = "BFRPARBA";
-
+        CorrectUser user = new CorrectUser();
         ValidationResult result = validator.validate(user);
+
         if (result.isValid()) {
             Assert.assertTrue(true);
         } else {
@@ -23,5 +21,17 @@ public class ValidationTest {
             }
             Assert.assertTrue(false);
         }
+    }
+
+    @Test
+    public void incorrectUserValidation() {
+        ClassValidator validator = new ClassValidator();
+
+        IncorrectUser user = new IncorrectUser();
+        ValidationResult result = validator.validate(user);
+
+        int errorCount = result.getErrorList().size();
+        int validators = ValidatorRegistry.getValidators().size();
+        Assert.assertEquals(errorCount, validators);
     }
 }
