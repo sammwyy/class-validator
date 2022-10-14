@@ -26,6 +26,7 @@ import com.dotphin.classvalidator.string.IsMagnetURI;
 import com.dotphin.classvalidator.string.IsMobilePhone;
 import com.dotphin.classvalidator.string.IsMongoID;
 import com.dotphin.classvalidator.string.IsNumeric;
+import com.dotphin.classvalidator.string.IsPort;
 import com.dotphin.classvalidator.string.IsRegex;
 
 public class CorrectUser {
@@ -106,6 +107,9 @@ public class CorrectUser {
 
     @IsNumeric
     public String numeric = "1234567890";
+
+    @IsPort
+    public String port = "8080";
 
     @IsRegex("a.c")
     public String regex = "abc";

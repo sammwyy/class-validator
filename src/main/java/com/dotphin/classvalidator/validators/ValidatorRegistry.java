@@ -29,6 +29,7 @@ import com.dotphin.classvalidator.validators.string.IsMagnetURIValidator;
 import com.dotphin.classvalidator.validators.string.IsMobilePhoneValidator;
 import com.dotphin.classvalidator.validators.string.IsMongoIDValidator;
 import com.dotphin.classvalidator.validators.string.IsNumericValidator;
+import com.dotphin.classvalidator.validators.string.IsPortValidator;
 import com.dotphin.classvalidator.validators.string.IsLengthValidator;
 import com.dotphin.classvalidator.validators.string.IsRegexValidator;
 
@@ -65,6 +66,7 @@ public class ValidatorRegistry {
         register(new IsMobilePhoneValidator());
         register(new IsMongoIDValidator());
         register(new IsNumericValidator());
+        register(new IsPortValidator());
         register(new IsRegexValidator());
     }
 

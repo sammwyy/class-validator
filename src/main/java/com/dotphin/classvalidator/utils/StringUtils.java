@@ -133,6 +133,15 @@ public class StringUtils {
         return value.matches("^\\d+$");
     }
 
+    public static boolean isPort(String value) {
+        try {
+            int port = Integer.parseInt(value);
+            return port >= 1 && port <= 65535;
+        } catch (Exception ignored) {
+            return false;
+        }
+    }
+
     public static boolean isSwift(String value) {
         return isBIC(value);
     }
