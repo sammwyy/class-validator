@@ -9,6 +9,8 @@ import com.dotphin.classvalidator.number.IsNegative;
 import com.dotphin.classvalidator.number.IsPositive;
 import com.dotphin.classvalidator.number.LongRange;
 import com.dotphin.classvalidator.string.Contains;
+import com.dotphin.classvalidator.string.Equals;
+import com.dotphin.classvalidator.string.EqualsIgnoreCase;
 import com.dotphin.classvalidator.string.IsAlpha;
 import com.dotphin.classvalidator.string.IsAlphanumeric;
 import com.dotphin.classvalidator.string.IsBIC;
@@ -69,6 +71,12 @@ public class IncorrectUser {
     // String
     @Contains("Hello World")
     public String contains = "No, not contains.";
+
+    @Equals("equals")
+    public String equals = "EqUaLs";
+
+    @EqualsIgnoreCase("EqUaLs IgNoRe CaSe")
+    public String equalsIgnoreCase = "not equals";
 
     @IsAlpha
     public String alpha = "Not a name";

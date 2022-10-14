@@ -13,6 +13,8 @@ import com.dotphin.classvalidator.validators.number.IsNegativeValidator;
 import com.dotphin.classvalidator.validators.number.IsPositiveValidator;
 import com.dotphin.classvalidator.validators.number.LongRangeValidator;
 import com.dotphin.classvalidator.validators.string.ContainsValidator;
+import com.dotphin.classvalidator.validators.string.EqualsIgnoreCaseValidator;
+import com.dotphin.classvalidator.validators.string.EqualsValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphaValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphanumericValidator;
 import com.dotphin.classvalidator.validators.string.IsBICValidator;
@@ -65,6 +67,8 @@ public class ValidatorRegistry {
 
         // String
         register(new ContainsValidator());
+        register(new EqualsValidator());
+        register(new EqualsIgnoreCaseValidator());
         register(new IsAlphanumericValidator());
         register(new IsAlphaValidator());
         register(new IsBase32Validator());
