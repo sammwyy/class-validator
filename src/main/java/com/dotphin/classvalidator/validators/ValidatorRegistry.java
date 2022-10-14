@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.dotphin.classvalidator.validators.array.ArrayContainsStringValidator;
 import com.dotphin.classvalidator.validators.array.IsArrayLengthValidator;
 import com.dotphin.classvalidator.validators.common.IsNotNullValidator;
 import com.dotphin.classvalidator.validators.number.DoubleRangeValidator;
@@ -56,6 +57,7 @@ public class ValidatorRegistry {
 
     static {
         // Array
+        register(new ArrayContainsStringValidator());
         register(new IsArrayLengthValidator());
 
         // Common
