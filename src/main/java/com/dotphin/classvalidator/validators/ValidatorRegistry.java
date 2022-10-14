@@ -3,9 +3,9 @@ package com.dotphin.classvalidator.validators;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.dotphin.classvalidator.validators.impl.IsEmailValidator;
-import com.dotphin.classvalidator.validators.impl.IsNotNullValidator;
-import com.dotphin.classvalidator.validators.impl.LengthValidator;
+import com.dotphin.classvalidator.validators.common.IsNotNullValidator;
+import com.dotphin.classvalidator.validators.string.IsEmailValidator;
+import com.dotphin.classvalidator.validators.string.LengthValidator;
 
 public class ValidatorRegistry {
     private static Map<Class<?>, Validator> validators = new HashMap<>();

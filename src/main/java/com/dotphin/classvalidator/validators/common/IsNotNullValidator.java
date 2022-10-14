@@ -1,8 +1,8 @@
-package com.dotphin.classvalidator.validators.impl;
+package com.dotphin.classvalidator.validators.common;
 
 import java.lang.reflect.Field;
 
-import com.dotphin.classvalidator.annotations.IsNotNull;
+import com.dotphin.classvalidator.common.IsNotNull;
 import com.dotphin.classvalidator.validators.Validator;
 
 public class IsNotNullValidator implements Validator {

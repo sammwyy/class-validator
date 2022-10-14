@@ -1,8 +1,8 @@
-package com.dotphin.classvalidator.validators.impl;
+package com.dotphin.classvalidator.validators.string;
 
 import java.lang.reflect.Field;
 
-import com.dotphin.classvalidator.annotations.IsEmail;
+import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.validators.Validator;
 
 public class IsEmailValidator implements Validator {

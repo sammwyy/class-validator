@@ -1,4 +1,4 @@
-package com.dotphin.classvalidator.annotations;
+package com.dotphin.classvalidator.string;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

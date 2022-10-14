@@ -1,7 +1,7 @@
 package com.dotphin.classvalidator;
 
-import com.dotphin.classvalidator.annotations.IsEmail;
-import com.dotphin.classvalidator.annotations.Length;
+import com.dotphin.classvalidator.string.IsEmail;
+import com.dotphin.classvalidator.string.Length;
 
 public class User {
     @IsEmail

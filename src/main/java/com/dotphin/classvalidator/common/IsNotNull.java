@@ -1,4 +1,4 @@
-package com.dotphin.classvalidator.annotations;
+package com.dotphin.classvalidator.common;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,8 +7,5 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Length {
-    int min() default Integer.MIN_VALUE;
-
-    int max() default Integer.MAX_VALUE;
+public @interface IsNotNull {
 }

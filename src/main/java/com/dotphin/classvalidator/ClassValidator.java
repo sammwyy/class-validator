@@ -3,7 +3,7 @@ package com.dotphin.classvalidator;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
-import com.dotphin.classvalidator.annotations.IsNotNull;
+import com.dotphin.classvalidator.common.IsNotNull;
 import com.dotphin.classvalidator.validators.Validator;
 import com.dotphin.classvalidator.validators.ValidatorRegistry;
 
