@@ -6,6 +6,8 @@ import java.util.Map;
 
 import com.dotphin.classvalidator.validators.common.IsNotNullValidator;
 import com.dotphin.classvalidator.validators.number.IsDivisibleByValidator;
+import com.dotphin.classvalidator.validators.number.IsNegativeValidator;
+import com.dotphin.classvalidator.validators.number.IsPositiveValidator;
 import com.dotphin.classvalidator.validators.string.ContainsValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphaValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphanumericValidator;
@@ -49,6 +51,8 @@ public class ValidatorRegistry {
 
         // Number
         register(new IsDivisibleByValidator());
+        register(new IsNegativeValidator());
+        register(new IsPositiveValidator());
 
         // String
         register(new ContainsValidator());
