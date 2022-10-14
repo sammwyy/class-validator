@@ -12,6 +12,7 @@ public class ValidationTest {
         user.username = "Sammwy";
         user.email = "sammwy@example.com";
         user.age = 20;
+        user.bic = "BFRPARBA";
 
         ValidationResult result = validator.validate(user);
         if (result.isValid()) {

@@ -1,5 +1,6 @@
 package com.dotphin.classvalidator;
 
+import com.dotphin.classvalidator.string.IsBIC;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.Length;
 
@@ -11,4 +12,7 @@ public class User {
     public String username;
 
     public int age;
+
+    @IsBIC
+    public String bic;
 }
