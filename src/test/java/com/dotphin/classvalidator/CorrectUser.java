@@ -1,6 +1,7 @@
 package com.dotphin.classvalidator;
 
 import com.dotphin.classvalidator.array.ArrayContainsString;
+import com.dotphin.classvalidator.array.ArrayNotContainsString;
 import com.dotphin.classvalidator.array.IsArrayLength;
 import com.dotphin.classvalidator.common.IsNotNull;
 import com.dotphin.classvalidator.number.DoubleRange;
@@ -52,6 +53,10 @@ public class CorrectUser {
     // Array
     @ArrayContainsString("foo")
     public String[] arrayContainsString = new String[] { "foo", "bar" };
+
+    // Array
+    @ArrayNotContainsString("not")
+    public String[] arrayNotContainsString = new String[] { "valid", "array" };
 
     @IsArrayLength(min = 2, max = 5)
     public String[] isArrayLength = new String[] { "a", "valid", "array", "length" };
