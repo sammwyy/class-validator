@@ -16,6 +16,7 @@ import com.dotphin.classvalidator.string.IsEthereumAddress;
 import com.dotphin.classvalidator.string.IsFQDN;
 import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.IsHex;
+import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -70,6 +71,9 @@ public class IncorrectUser {
 
     @IsHex
     public String hex = "Not a valid Hex";
+
+    @IsHexColor
+    public String hexColor = "Not a valid Hex color";
 
     @IsHSL
     public String hsl = "Not a valid HSL";

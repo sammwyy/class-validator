@@ -16,6 +16,7 @@ import com.dotphin.classvalidator.string.IsEthereumAddress;
 import com.dotphin.classvalidator.string.IsFQDN;
 import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.IsHex;
+import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -70,6 +71,9 @@ public class CorrectUser {
 
     @IsHex
     public String hex = "abcdef0123456789";
+
+    @IsHexColor
+    public String hexColor = "#ff0000";
 
     @IsHSL
     public String hsl = "hsl(240, 100%, 50%)";
