@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 import com.dotphin.classvalidator.string.Regex;
 import com.dotphin.classvalidator.validators.Validator;
 
-public class RegexValidation implements Validator {
+public class RegexValidator implements Validator {
     @Override
     public Class<?> getAnnotation() {
         return Regex.class;
