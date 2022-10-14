@@ -12,6 +12,7 @@ import com.dotphin.classvalidator.string.IsCreditCard;
 import com.dotphin.classvalidator.string.IsDataURI;
 import com.dotphin.classvalidator.string.IsDateString;
 import com.dotphin.classvalidator.string.IsEmail;
+import com.dotphin.classvalidator.string.IsEthereumAddress;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -27,9 +28,6 @@ public class CorrectUser {
 
     @IsBIC
     public String bic = "BFRPARBA";
-
-    @IsEmail
-    public String email = "sammwy@example.com";
 
     @Length(min = 4, max = 16)
     public String username = "sammwy";
@@ -57,4 +55,10 @@ public class CorrectUser {
 
     @IsDateString
     public String dateString = "23-11-2001 22:00:00:000";
+
+    @IsEmail
+    public String email = "sammwy@example.com";
+
+    @IsEthereumAddress
+    public String ethereumAddress = "0x8ba57063ce41d0e7e2de18bd02a389b7da945e63";
 }

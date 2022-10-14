@@ -12,6 +12,7 @@ import com.dotphin.classvalidator.string.IsCreditCard;
 import com.dotphin.classvalidator.string.IsDataURI;
 import com.dotphin.classvalidator.string.IsDateString;
 import com.dotphin.classvalidator.string.IsEmail;
+import com.dotphin.classvalidator.string.IsEthereumAddress;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -27,9 +28,6 @@ public class IncorrectUser {
 
     @IsBIC
     public String bic = "Not a bic";
-
-    @IsEmail
-    public String email = "Not an email";
 
     @Length(min = 4, max = 16)
     public String username = "Super extra long username, this is invalid";
@@ -57,4 +55,10 @@ public class IncorrectUser {
 
     @IsDateString
     public String dateString = "Not a date string";
+
+    @IsEmail
+    public String email = "Not an email";
+
+    @IsEthereumAddress
+    public String ethereumAddress = "Not an Ethereum address";
 }

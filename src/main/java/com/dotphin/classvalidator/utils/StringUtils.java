@@ -52,6 +52,10 @@ public class StringUtils {
         return value.matches("^(.+)@(.+)$");
     }
 
+    public static boolean isEthereumAddress(String value) {
+        return value.matches("^0x[a-fA-F0-9]{40}$");
+    }
+
     public static boolean isLength(String value, int min, int max) {
         int length = value.length();
         return length <= max && length >= min;
