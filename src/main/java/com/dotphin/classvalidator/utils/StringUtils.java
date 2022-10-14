@@ -73,6 +73,10 @@ public class StringUtils {
                 "^hsl\\(\\s*(0|[1-9]\\d?|[12]\\d\\d|3[0-5]\\d)\\s*,\\s*((0|[1-9]\\d?|100)%)\\s*,\\s*((0|[1-9]\\d?|100)%)\\s*\\)$");
     }
 
+    public static boolean isIP(String value) {
+        return value.matches("^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\\.(?!$)|$)){4}$");
+    }
+
     public static boolean isLength(String value, int min, int max) {
         int length = value.length();
         return length <= max && length >= min;

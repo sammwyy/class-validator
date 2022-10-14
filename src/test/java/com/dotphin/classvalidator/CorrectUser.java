@@ -17,6 +17,7 @@ import com.dotphin.classvalidator.string.IsFQDN;
 import com.dotphin.classvalidator.string.IsHSL;
 import com.dotphin.classvalidator.string.IsHex;
 import com.dotphin.classvalidator.string.IsHexColor;
+import com.dotphin.classvalidator.string.IsIP;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -77,4 +78,7 @@ public class CorrectUser {
 
     @IsHSL
     public String hsl = "hsl(240, 100%, 50%)";
+
+    @IsIP
+    public String ip = "192.168.0.1";
 }
