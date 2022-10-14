@@ -30,6 +30,7 @@ import com.dotphin.classvalidator.string.IsPort;
 import com.dotphin.classvalidator.string.IsRGB;
 import com.dotphin.classvalidator.string.IsRegex;
 import com.dotphin.classvalidator.string.IsSemVer;
+import com.dotphin.classvalidator.string.IsUUID;
 
 public class IncorrectUser {
     @Contains("Hello World")
@@ -121,4 +122,7 @@ public class IncorrectUser {
 
     @IsSemVer
     public String semver = "Not a valid SemVer";
+
+    @IsUUID
+    public String uuid = "Not a valid UUID";
 }

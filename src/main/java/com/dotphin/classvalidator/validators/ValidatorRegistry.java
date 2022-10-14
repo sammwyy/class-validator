@@ -34,6 +34,7 @@ import com.dotphin.classvalidator.validators.string.IsRGBValidator;
 import com.dotphin.classvalidator.validators.string.IsLengthValidator;
 import com.dotphin.classvalidator.validators.string.IsRegexValidator;
 import com.dotphin.classvalidator.validators.string.IsSemVerValidator;
+import com.dotphin.classvalidator.validators.string.IsUUIDValidator;
 
 public class ValidatorRegistry {
     private static Map<Class<?>, Validator> validators = new HashMap<>();
@@ -72,6 +73,7 @@ public class ValidatorRegistry {
         register(new IsRegexValidator());
         register(new IsRGBValidator());
         register(new IsSemVerValidator());
+        register(new IsUUIDValidator());
     }
 
     public static void register(Validator validator) {

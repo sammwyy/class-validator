@@ -154,4 +154,8 @@ public class StringUtils {
     public static boolean isSwift(String value) {
         return isBIC(value);
     }
+
+    public static boolean isUUID(String value) {
+        return value.matches("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$");
+    }
 }
