@@ -32,6 +32,7 @@ import com.dotphin.classvalidator.string.IsMacAddress;
 import com.dotphin.classvalidator.string.IsMagnetURI;
 import com.dotphin.classvalidator.string.IsMobilePhone;
 import com.dotphin.classvalidator.string.IsMongoID;
+import com.dotphin.classvalidator.string.IsNotEmpty;
 import com.dotphin.classvalidator.string.IsNumeric;
 import com.dotphin.classvalidator.string.IsPort;
 import com.dotphin.classvalidator.string.IsRGB;
@@ -140,6 +141,9 @@ public class IncorrectUser {
 
     @IsMongoID
     public String mongoID = "Not a valid Mongo ID";
+
+    @IsNotEmpty(trim = true)
+    public String notEmpty = "            ";
 
     @IsNumeric
     public String numeric = "Not a valid number";
