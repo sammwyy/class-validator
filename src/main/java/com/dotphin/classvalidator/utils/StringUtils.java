@@ -9,6 +9,10 @@ public class StringUtils {
         return value.matches("^[a-zA-Z0-9]*$");
     }
 
+    public static boolean isBase32(String value) {
+        return value.matches("^([A-Z2-7=]{8})+$");
+    }
+
     public static boolean isBIC(String value) {
         return value.matches("^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$");
     }

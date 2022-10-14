@@ -5,6 +5,7 @@ import com.dotphin.classvalidator.string.Contains;
 import com.dotphin.classvalidator.string.IsAlpha;
 import com.dotphin.classvalidator.string.IsAlphanumeric;
 import com.dotphin.classvalidator.string.IsBIC;
+import com.dotphin.classvalidator.string.IsBase32;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
@@ -33,4 +34,7 @@ public class IncorrectUser {
 
     @IsNotNull
     public String notnull = null;
+
+    @IsBase32
+    public String base32 = "is not base 32";
 }
