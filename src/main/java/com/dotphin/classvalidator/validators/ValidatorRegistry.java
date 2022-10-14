@@ -4,21 +4,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.dotphin.classvalidator.validators.impl.IsEmailValidator;
+import com.dotphin.classvalidator.validators.impl.IsNotNullValidator;
 import com.dotphin.classvalidator.validators.impl.LengthValidator;
 
 public class ValidatorRegistry {
-    private static Map<Class<?>, Validator> registry = new HashMap<>();
+    private static Map<Class<?>, Validator> validators = new HashMap<>();
 
     static {
         register(new IsEmailValidator());
+        register(new IsNotNullValidator());
         register(new LengthValidator());
     }
 
     public static void register(Validator validator) {
-        registry.put(validator.getAnnotation(), validator);
+        validators.put(validator.getAnnotation(), validator);
     }
 
     public static Validator getValidatorForClass(Class<?> annotation) {
-        return registry.get(annotation);
+        return validators.get(annotation);
     }
 }
