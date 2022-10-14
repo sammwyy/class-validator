@@ -17,6 +17,7 @@ import com.dotphin.classvalidator.validators.string.IsDataURIValidator;
 import com.dotphin.classvalidator.validators.string.IsDateStringValidator;
 import com.dotphin.classvalidator.validators.string.IsEmailValidator;
 import com.dotphin.classvalidator.validators.string.IsEthereumAddressValidator;
+import com.dotphin.classvalidator.validators.string.IsFQDNValidator;
 import com.dotphin.classvalidator.validators.string.LengthValidator;
 import com.dotphin.classvalidator.validators.string.RegexValidator;
 
@@ -40,6 +41,7 @@ public class ValidatorRegistry {
         register(new IsDateStringValidator());
         register(new IsEmailValidator());
         register(new IsEthereumAddressValidator());
+        register(new IsFQDNValidator());
         register(new LengthValidator());
         register(new RegexValidator());
     }

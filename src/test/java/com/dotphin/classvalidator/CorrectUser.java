@@ -13,6 +13,7 @@ import com.dotphin.classvalidator.string.IsDataURI;
 import com.dotphin.classvalidator.string.IsDateString;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.IsEthereumAddress;
+import com.dotphin.classvalidator.string.IsFQDN;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -61,4 +62,7 @@ public class CorrectUser {
 
     @IsEthereumAddress
     public String ethereumAddress = "0x8ba57063ce41d0e7e2de18bd02a389b7da945e63";
+
+    @IsFQDN
+    public String fqdn = "www.sammwy.com";
 }

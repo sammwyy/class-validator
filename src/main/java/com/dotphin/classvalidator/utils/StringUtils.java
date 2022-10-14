@@ -56,6 +56,10 @@ public class StringUtils {
         return value.matches("^0x[a-fA-F0-9]{40}$");
     }
 
+    public static boolean isFQDN(String value) {
+        return value.matches("(?=^.{4,253}$)(^((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\\.)+[a-zA-Z]{2,63}$)");
+    }
+
     public static boolean isLength(String value, int min, int max) {
         int length = value.length();
         return length <= max && length >= min;
