@@ -142,6 +142,11 @@ public class StringUtils {
         }
     }
 
+    public static boolean isRGB(String value) {
+        return value.matches(
+                "^rgb[(](?:\\s*0*(?:\\d\\d?(?:\\.\\d+)?(?:\\s*%)?|\\.\\d+\\s*%|100(?:\\.0*)?\\s*%|(?:1\\d\\d|2[0-4]\\d|25[0-5])(?:\\.\\d+)?)\\s*(?:,(?![)])|(?=[)]))){3}[)]$");
+    }
+
     public static boolean isSwift(String value) {
         return isBIC(value);
     }

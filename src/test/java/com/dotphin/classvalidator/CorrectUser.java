@@ -27,6 +27,7 @@ import com.dotphin.classvalidator.string.IsMobilePhone;
 import com.dotphin.classvalidator.string.IsMongoID;
 import com.dotphin.classvalidator.string.IsNumeric;
 import com.dotphin.classvalidator.string.IsPort;
+import com.dotphin.classvalidator.string.IsRGB;
 import com.dotphin.classvalidator.string.IsRegex;
 
 public class CorrectUser {
@@ -113,4 +114,7 @@ public class CorrectUser {
 
     @IsRegex("a.c")
     public String regex = "abc";
+
+    @IsRGB
+    public String rgb = "rgb(255, 0, 0)";
 }
