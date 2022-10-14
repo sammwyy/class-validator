@@ -33,6 +33,7 @@ import com.dotphin.classvalidator.string.IsSemVer;
 import com.dotphin.classvalidator.string.IsURL;
 import com.dotphin.classvalidator.string.IsUUID;
 import com.dotphin.classvalidator.string.IsUpperCase;
+import com.dotphin.classvalidator.string.NotContains;
 
 public class CorrectUser {
     @Contains("Hello World")
@@ -133,4 +134,7 @@ public class CorrectUser {
 
     @IsUUID
     public String uuid = "01234567-9ABC-DEF0-1234-56789ABCDEF0";
+
+    @NotContains("not contains")
+    public String notcontains = "A valid value";
 }

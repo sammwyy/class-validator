@@ -37,6 +37,7 @@ import com.dotphin.classvalidator.validators.string.IsSemVerValidator;
 import com.dotphin.classvalidator.validators.string.IsURLValidator;
 import com.dotphin.classvalidator.validators.string.IsUUIDValidator;
 import com.dotphin.classvalidator.validators.string.IsUpperCaseValidator;
+import com.dotphin.classvalidator.validators.string.NotContainsValidator;
 
 public class ValidatorRegistry {
     private static Map<Class<?>, Validator> validators = new HashMap<>();
@@ -78,6 +79,7 @@ public class ValidatorRegistry {
         register(new IsUpperCaseValidator());
         register(new IsURLValidator());
         register(new IsUUIDValidator());
+        register(new NotContainsValidator());
     }
 
     public static void register(Validator validator) {
