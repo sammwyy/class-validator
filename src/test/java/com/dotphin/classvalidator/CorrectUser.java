@@ -1,6 +1,7 @@
 package com.dotphin.classvalidator;
 
 import com.dotphin.classvalidator.common.IsNotNull;
+import com.dotphin.classvalidator.number.IsDivisibleBy;
 import com.dotphin.classvalidator.string.Contains;
 import com.dotphin.classvalidator.string.IsAlpha;
 import com.dotphin.classvalidator.string.IsAlphanumeric;
@@ -36,6 +37,11 @@ import com.dotphin.classvalidator.string.IsUpperCase;
 import com.dotphin.classvalidator.string.NotContains;
 
 public class CorrectUser {
+    // Number
+    @IsDivisibleBy(5)
+    public int age = 20;
+
+    // String
     @Contains("Hello World")
     public String contains = "Uhm, This is a Hello World.";
 

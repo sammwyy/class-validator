@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.dotphin.classvalidator.validators.common.IsNotNullValidator;
+import com.dotphin.classvalidator.validators.number.IsDivisibleByValidator;
 import com.dotphin.classvalidator.validators.string.ContainsValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphaValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphanumericValidator;
@@ -45,6 +46,9 @@ public class ValidatorRegistry {
     static {
         // Common
         register(new IsNotNullValidator());
+
+        // Number
+        register(new IsDivisibleByValidator());
 
         // String
         register(new ContainsValidator());
