@@ -18,8 +18,8 @@ public class LengthValidator implements Validator {
         if (value != null && value instanceof String) {
             int length = ((String) value).length();
             return length <= annotation.max() && length >= annotation.min();
-        } else {
-            return false;
         }
+
+        return true;
     }
 }

@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.dotphin.classvalidator.validators.common.IsNotNullValidator;
+import com.dotphin.classvalidator.validators.string.ContainsValidator;
 import com.dotphin.classvalidator.validators.string.IsEmailValidator;
 import com.dotphin.classvalidator.validators.string.LengthValidator;
 
@@ -11,8 +12,12 @@ public class ValidatorRegistry {
     private static Map<Class<?>, Validator> validators = new HashMap<>();
 
     static {
-        register(new IsEmailValidator());
+        // Common
         register(new IsNotNullValidator());
+
+        // String
+        register(new ContainsValidator());
+        register(new IsEmailValidator());
         register(new LengthValidator());
     }
 
