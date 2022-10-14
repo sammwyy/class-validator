@@ -8,6 +8,7 @@ import com.dotphin.classvalidator.string.IsBIC;
 import com.dotphin.classvalidator.string.IsBTCAddress;
 import com.dotphin.classvalidator.string.IsBase32;
 import com.dotphin.classvalidator.string.IsBase64;
+import com.dotphin.classvalidator.string.IsCreditCard;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
@@ -45,4 +46,7 @@ public class CorrectUser {
 
     @IsBTCAddress
     public String btcAddress = "16AVL22aTtzHZrsPBQtMZN6BrW7T2mvZqB";
+
+    @IsCreditCard
+    public String creditCard = "4222222222222";
 }

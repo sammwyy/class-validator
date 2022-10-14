@@ -12,6 +12,7 @@ import com.dotphin.classvalidator.validators.string.IsBICValidator;
 import com.dotphin.classvalidator.validators.string.IsBTCAddressValidator;
 import com.dotphin.classvalidator.validators.string.IsBase32Validator;
 import com.dotphin.classvalidator.validators.string.IsBase64Validator;
+import com.dotphin.classvalidator.validators.string.IsCreditCardValidator;
 import com.dotphin.classvalidator.validators.string.IsEmailValidator;
 import com.dotphin.classvalidator.validators.string.LengthValidator;
 import com.dotphin.classvalidator.validators.string.RegexValidator;
@@ -31,6 +32,7 @@ public class ValidatorRegistry {
         register(new IsBase64Validator());
         register(new IsBICValidator());
         register(new IsBTCAddressValidator());
+        register(new IsCreditCardValidator());
         register(new IsEmailValidator());
         register(new LengthValidator());
         register(new RegexValidator());

@@ -8,6 +8,7 @@ import com.dotphin.classvalidator.string.IsBIC;
 import com.dotphin.classvalidator.string.IsBTCAddress;
 import com.dotphin.classvalidator.string.IsBase32;
 import com.dotphin.classvalidator.string.IsBase64;
+import com.dotphin.classvalidator.string.IsCreditCard;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
@@ -38,11 +39,14 @@ public class IncorrectUser {
     public String notnull = null;
 
     @IsBase32
-    public String base32 = "is not base32";
+    public String base32 = "Not base32";
 
     @IsBase64
-    public String base64 = "is not base64";
+    public String base64 = "Not base64";
 
     @IsBTCAddress
-    public String btcAddress = "is not a btc address";
+    public String btcAddress = "Not a btc address";
+
+    @IsCreditCard
+    public String creditCard = "Not a credit card";
 }
