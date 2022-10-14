@@ -1,5 +1,8 @@
 package com.dotphin.classvalidator.utils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 public class StringUtils {
     public static boolean isAlpha(String value) {
         return value.matches("^[a-zA-Z]*$");
@@ -32,6 +35,17 @@ public class StringUtils {
 
     public static boolean isDataURI(String value) {
         return value.matches("data:([-\\w]+\\/[-+\\w.]+)?(;?\\w+=[-\\w]+)*(;base64)?,.*");
+    }
+
+    public static boolean isDateString(String value) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss:ms");
+        dateFormat.setLenient(false);
+        try {
+            dateFormat.parse(value);
+            return true;
+        } catch (ParseException pe) {
+            return false;
+        }
     }
 
     public static boolean isEmail(String value) {

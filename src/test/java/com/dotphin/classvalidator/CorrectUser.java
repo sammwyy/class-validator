@@ -10,6 +10,7 @@ import com.dotphin.classvalidator.string.IsBase32;
 import com.dotphin.classvalidator.string.IsBase64;
 import com.dotphin.classvalidator.string.IsCreditCard;
 import com.dotphin.classvalidator.string.IsDataURI;
+import com.dotphin.classvalidator.string.IsDateString;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
@@ -53,4 +54,7 @@ public class CorrectUser {
 
     @IsDataURI
     public String dataURI = "data:image/jpeg;base64,UEsDBBQAAAAI";
+
+    @IsDateString
+    public String dateString = "23-11-2001 22:00:00:000";
 }
