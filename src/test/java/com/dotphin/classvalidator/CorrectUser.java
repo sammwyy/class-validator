@@ -6,6 +6,7 @@ import com.dotphin.classvalidator.string.IsAlpha;
 import com.dotphin.classvalidator.string.IsAlphanumeric;
 import com.dotphin.classvalidator.string.IsBIC;
 import com.dotphin.classvalidator.string.IsBase32;
+import com.dotphin.classvalidator.string.IsBase64;
 import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
@@ -37,4 +38,7 @@ public class CorrectUser {
 
     @IsBase32
     public String base32 = "ORSXG5A=";
+
+    @IsBase64
+    public String base64 = "ZXN0YSBlcyB1bmEgcHJ1ZWJh";
 }

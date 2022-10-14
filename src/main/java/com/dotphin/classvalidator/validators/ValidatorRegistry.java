@@ -10,6 +10,7 @@ import com.dotphin.classvalidator.validators.string.IsAlphaValidator;
 import com.dotphin.classvalidator.validators.string.IsAlphanumericValidator;
 import com.dotphin.classvalidator.validators.string.IsBICValidator;
 import com.dotphin.classvalidator.validators.string.IsBase32Validator;
+import com.dotphin.classvalidator.validators.string.IsBase64Validator;
 import com.dotphin.classvalidator.validators.string.IsEmailValidator;
 import com.dotphin.classvalidator.validators.string.LengthValidator;
 import com.dotphin.classvalidator.validators.string.RegexValidator;
@@ -26,6 +27,7 @@ public class ValidatorRegistry {
         register(new IsAlphanumericValidator());
         register(new IsAlphaValidator());
         register(new IsBase32Validator());
+        register(new IsBase64Validator());
         register(new IsBICValidator());
         register(new IsEmailValidator());
         register(new LengthValidator());

@@ -13,6 +13,10 @@ public class StringUtils {
         return value.matches("^([A-Z2-7=]{8})+$");
     }
 
+    public static boolean isBase64(String value) {
+        return value.matches("^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$");
+    }
+
     public static boolean isBIC(String value) {
         return value.matches("^[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?$");
     }
