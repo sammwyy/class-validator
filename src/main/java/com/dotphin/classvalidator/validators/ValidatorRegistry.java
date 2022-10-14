@@ -7,6 +7,7 @@ import com.dotphin.classvalidator.validators.common.IsNotNullValidator;
 import com.dotphin.classvalidator.validators.string.ContainsValidator;
 import com.dotphin.classvalidator.validators.string.IsEmailValidator;
 import com.dotphin.classvalidator.validators.string.LengthValidator;
+import com.dotphin.classvalidator.validators.string.RegexValidation;
 
 public class ValidatorRegistry {
     private static Map<Class<?>, Validator> validators = new HashMap<>();
@@ -19,6 +20,7 @@ public class ValidatorRegistry {
         register(new ContainsValidator());
         register(new IsEmailValidator());
         register(new LengthValidator());
+        register(new RegexValidation());
     }
 
     public static void register(Validator validator) {
