@@ -2,17 +2,17 @@ package com.dotphin.classvalidator.validators.string;
 
 import java.lang.reflect.Field;
 
-import com.dotphin.classvalidator.string.Regex;
+import com.dotphin.classvalidator.string.IsRegex;
 import com.dotphin.classvalidator.validators.StringValidator;
 
-public class RegexValidator extends StringValidator {
+public class IsRegexValidator extends StringValidator {
     @Override
     public Class<?> getAnnotation() {
-        return Regex.class;
+        return IsRegex.class;
     }
 
     public String getRegex(Field field) {
-        Regex regex = field.getAnnotation(Regex.class);
+        IsRegex regex = field.getAnnotation(IsRegex.class);
         return regex.value();
     }
 

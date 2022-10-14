@@ -24,7 +24,7 @@ import com.dotphin.classvalidator.validators.string.IsHexValidator;
 import com.dotphin.classvalidator.validators.string.IsIPValidator;
 import com.dotphin.classvalidator.validators.string.IsLocaleValidator;
 import com.dotphin.classvalidator.validators.string.IsLengthValidator;
-import com.dotphin.classvalidator.validators.string.RegexValidator;
+import com.dotphin.classvalidator.validators.string.IsRegexValidator;
 
 public class ValidatorRegistry {
     private static Map<Class<?>, Validator> validators = new HashMap<>();
@@ -53,7 +53,7 @@ public class ValidatorRegistry {
         register(new IsIPValidator());
         register(new IsLengthValidator());
         register(new IsLocaleValidator());
-        register(new RegexValidator());
+        register(new IsRegexValidator());
     }
 
     public static void register(Validator validator) {

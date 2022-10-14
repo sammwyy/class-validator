@@ -20,7 +20,7 @@ import com.dotphin.classvalidator.string.IsHexColor;
 import com.dotphin.classvalidator.string.IsIP;
 import com.dotphin.classvalidator.string.IsLength;
 import com.dotphin.classvalidator.string.IsLocale;
-import com.dotphin.classvalidator.string.Regex;
+import com.dotphin.classvalidator.string.IsRegex;
 
 public class IncorrectUser {
     @Contains("Hello World")
@@ -34,9 +34,6 @@ public class IncorrectUser {
 
     @IsBIC
     public String bic = "Not a bic";
-
-    @Regex("a.c")
-    public String regex = "def";
 
     @IsNotNull
     public String notnull = null;
@@ -85,4 +82,7 @@ public class IncorrectUser {
 
     @IsLocale
     public String locale = "Not a valid Locale";
+
+    @IsRegex("a.c")
+    public String regex = "def";
 }
