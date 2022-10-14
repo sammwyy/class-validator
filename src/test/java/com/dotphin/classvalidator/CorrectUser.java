@@ -15,6 +15,7 @@ import com.dotphin.classvalidator.string.IsEmail;
 import com.dotphin.classvalidator.string.IsEthereumAddress;
 import com.dotphin.classvalidator.string.IsFQDN;
 import com.dotphin.classvalidator.string.IsHSL;
+import com.dotphin.classvalidator.string.IsHex;
 import com.dotphin.classvalidator.string.Length;
 import com.dotphin.classvalidator.string.Regex;
 
@@ -66,6 +67,9 @@ public class CorrectUser {
 
     @IsFQDN
     public String fqdn = "www.sammwy.com";
+
+    @IsHex
+    public String hex = "abcdef0123456789";
 
     @IsHSL
     public String hsl = "hsl(240, 100%, 50%)";
